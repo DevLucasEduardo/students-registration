@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,9 +6,9 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  @Input() openMenu: boolean = true;
+  @Output() menuEvent: EventEmitter<any> = new EventEmitter();
 
-  handleClick() {
-    this.openMenu = !this.openMenu;
+  changeMenuState() {
+    this.menuEvent.emit();
   }
 }

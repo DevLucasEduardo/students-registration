@@ -1,7 +1,6 @@
 <header class="header-container">
-  <div class="hamburger-container">
+  <div class="hamburger-container" (click)="changeMenuState()">
     <svg
-      (click)="handleClick()"
       class="hamburger"
       focusable="false"
       viewBox="0 0 24 24"
@@ -12,5 +11,5 @@
   </div>
 
   <h1>Student Registration</h1>
-  <div></div>
+  <div class="filler"></div>
 </header>

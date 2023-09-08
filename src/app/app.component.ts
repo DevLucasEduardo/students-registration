@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'student-registration';
-  openMenu = true;
+  openMenu: boolean = true;
+  title = 'StudentRegistration';
+  onMenuEvent() {
+    this.openMenu = !this.openMenu;
+  }
 }

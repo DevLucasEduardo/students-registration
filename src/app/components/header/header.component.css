@@ -1,7 +1,7 @@
 .header-container {
-  display: flex;
   background-color: #1976d2;
   align-items: center;
+  display: flex;
   justify-content: space-between;
   font-family: Roboto, Helvetica Neue, sans-serif;
   flex-wrap: nowrap;
@@ -13,11 +13,21 @@ h1 {
 }
 
 .hamburger-container {
-  padding: 0 20px;
+  padding: 16.5px 16.5px;
   cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hamburger-container:hover {
+  background: rgb(85, 142, 218);
 }
 
 .hamburger {
   height: 30px;
   fill: white;
+}
+
+.filler {
+  width: 70px;
+  height: 40px;
 }
