@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { FormRegisterComponent } from './components/form-register/form-register.component';
 import { HeaderComponent } from './components/header/header.component';
+import { FormTemplateComponent } from './components/form-template/form-template.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { HeaderComponent } from './components/header/header.component';
     NavigationComponent,
     FormRegisterComponent,
     HeaderComponent,
+    FormTemplateComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

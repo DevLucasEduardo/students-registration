@@ -3,8 +3,10 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  font-family: Roboto, Helvetica Neue, sans-serif;
   flex-wrap: nowrap;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 h1 {

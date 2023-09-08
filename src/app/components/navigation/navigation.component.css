@@ -6,8 +6,8 @@
   width: 250px;
   height: 100%;
   background-color: #fafafa;
-  top: 1;
   transition: left 0.3s ease;
+  top: 74px;
 }
 
 .nav-container-close {

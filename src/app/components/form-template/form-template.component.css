@@ -1,0 +1,39 @@
+.form-container {
+  background-color: #fff;
+  max-width: 350px;
+  margin: 100px auto 0 auto;
+  border-radius: 10px;
+  padding: 23px;
+}
+
+.form-block {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 5px;
+}
+
+input,
+button {
+  font-size: 1.1em;
+  border-radius: 5px;
+  color: rgb(85, 85, 85);
+  border: 0.5px rgb(187, 180, 180) solid;
+}
+button {
+  padding: 5px 10px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+input:focus {
+  outline: 1px solid rgb(181, 181, 202);
+}
