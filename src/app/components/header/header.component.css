@@ -1,0 +1,23 @@
+.header-container {
+  display: flex;
+  background-color: #1976d2;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Roboto, Helvetica Neue, sans-serif;
+  flex-wrap: nowrap;
+}
+
+h1 {
+  margin: 15px;
+  color: white;
+}
+
+.hamburger-container {
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.hamburger {
+  height: 30px;
+  fill: white;
+}

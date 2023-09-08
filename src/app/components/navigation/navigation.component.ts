@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-navigation',
@@ -6,9 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./navigation.component.css'],
 })
 export class NavigationComponent {
-  checked: boolean = true;
-
-  handleClick(): void {
-    console.log('oi;');
-  }
+  @Input() openMenu: boolean = true;
 }
