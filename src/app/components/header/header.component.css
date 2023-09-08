@@ -8,12 +8,12 @@
 }
 
 h1 {
-  margin: 15px;
+  margin: 13px;
   color: white;
 }
 
 .hamburger-container {
-  padding: 16.5px 16.5px;
+  padding: 18.5px 16.5px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
