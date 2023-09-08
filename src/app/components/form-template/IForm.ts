@@ -1,6 +1,7 @@
 export interface FormFormat {
   id: number;
-  name: string;
+  firstName: string;
+  lastName: string;
   birthDate: Date;
   course: string;
 }
