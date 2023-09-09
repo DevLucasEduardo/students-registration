@@ -1,22 +1,29 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
-import { FormRegisterComponent } from './components/form-register/form-register.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FormTemplateComponent } from './components/form-template/form-template.component';
+import { FormCreateComponent } from './components/form-create/form-create.component';
+import { FormReadComponent } from './components/form-read/form-read.component';
+import { FormUpdateComponent } from './components/form-update/form-update.component';
+import { FormDeleteComponent } from './components/form-delete/form-delete.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    FormRegisterComponent,
     HeaderComponent,
     FormTemplateComponent,
+    FormCreateComponent,
+    FormReadComponent,
+    FormUpdateComponent,
+    FormDeleteComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

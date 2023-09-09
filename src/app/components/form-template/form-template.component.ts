@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormFormat } from './IForm';
 @Component({
   selector: 'app-form-template',
@@ -7,12 +7,6 @@ import { FormFormat } from './IForm';
 })
 export class FormTemplateComponent {
   objForm!: FormFormat;
-
-  formItems: string[] = [
-    'ID',
-    'First Name',
-    'Last Name',
-    'Birth Date',
-    'Course',
-  ];
+  @Input() formItems!: string[];
+  @Input() buttonTitle!: string;
 }

@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FormTemplateComponent } from './components/form-template/form-template.component';
+import { FormCreateComponent } from './components/form-create/form-create.component';
+import { FormReadComponent } from './components/form-read/form-read.component';
+import { FormDeleteComponent } from './components/form-delete/form-delete.component';
+import { FormUpdateComponent } from './components/form-update/form-update.component';
 
 const routes: Routes = [
-  { path: 'create', component: FormTemplateComponent },
-  { path: 'read', component: FormTemplateComponent },
-  { path: 'update', component: FormTemplateComponent },
-  { path: 'delete', component: FormTemplateComponent },
+  { path: 'create', component: FormCreateComponent },
+  { path: 'read', component: FormReadComponent },
+  { path: 'update', component: FormUpdateComponent },
+  { path: 'delete', component: FormDeleteComponent },
 ];
 
 @NgModule({
