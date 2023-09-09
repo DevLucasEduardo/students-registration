@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   openMenu: boolean = false;
   title = 'StudentRegistration';
+  formsData: string[] = [];
 
   onMenuEvent() {
     this.openMenu = !this.openMenu;

@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./form-delete.component.css'],
 })
 export class FormDeleteComponent {
-  formItems: string[] = ['ID'];
-  buttonTitle = 'Delete';
+  formItems: Map<string, string> = new Map([['ID', 'text']]);
+  title = 'Delete';
 }

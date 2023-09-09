@@ -17,12 +17,14 @@ label {
   margin-bottom: 5px;
 }
 
-input {
+input,
+select {
   padding: 5px;
 }
 
 input,
-button {
+button,
+select {
   font-size: 1.1em;
   border-radius: 5px;
   color: rgb(85, 85, 85);

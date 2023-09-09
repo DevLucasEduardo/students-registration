@@ -6,12 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./form-read.component.css'],
 })
 export class FormReadComponent {
-  formItems: string[] = [
-    'ID',
-    'First Name',
-    'Last Name',
-    'Birth Date',
-    'Course',
-  ];
-  buttonTitle = 'Read';
+  formItems: Map<string, string> = new Map([
+    ['ID', 'text'],
+    ['First Name', 'text'],
+    ['Last Name', 'text'],
+    ['Birth Date', 'date'],
+    ['Course', 'text'],
+  ]);
+
+  title = 'Read';
 }

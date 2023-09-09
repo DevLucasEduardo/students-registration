@@ -6,12 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./form-update.component.css'],
 })
 export class FormUpdateComponent {
-  formItems: string[] = [
-    'ID',
-    'First Name',
-    'Last Name',
-    'Birth Date',
-    'Course',
-  ];
-  buttonTitle = 'Update';
+  formItems: Map<string, string> = new Map([
+    ['ID', 'text'],
+    ['First Name', 'text'],
+    ['Last Name', 'text'],
+    ['Birth Date', 'date'],
+    ['Course', 'text'],
+  ]);
+  title = 'Update';
 }

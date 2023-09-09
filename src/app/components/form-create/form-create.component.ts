@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./form-create.component.css'],
 })
 export class FormCreateComponent {
-  formItems: string[] = ['First Name', 'Last Name', 'Birth Date', 'Course'];
-  buttonTitle = 'Create';
+  formItems: Map<string, string> = new Map([
+    ['First Name', 'text'],
+    ['Last Name', 'text'],
+    ['Birth Date', 'date'],
+    ['Course', 'text'],
+  ]);
+  title = 'Create';
 }
