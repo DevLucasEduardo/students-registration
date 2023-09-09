@@ -1,7 +1,13 @@
 <form class="form-container">
   <div *ngFor="let item of formItems" class="form-block">
     <label for="">{{ item }}: </label>
-    <input type="text" />
+    <input
+      *ngIf="buttonTitle === 'Create' || item === 'ID'; else readOnlyBlock"
+      type="text"
+    />
+    <ng-template #readOnlyBlock>
+      <input type="text" readonly class="readonly-input" />
+    </ng-template>
   </div>
   <button>{{ buttonTitle }}</button>
 </form>
