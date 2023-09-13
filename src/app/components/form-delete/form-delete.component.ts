@@ -20,9 +20,6 @@ export class FormDeleteComponent {
   title = 'Delete';
 
   form = this.fb.group({
-    firstName: ['', Validators.required],
-    lastName: ['', Validators.required],
-    birthDate: ['', Validators.required],
-    course: ['', Validators.required],
+    id: ['', Validators.required],
   });
 }

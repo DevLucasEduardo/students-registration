@@ -40,6 +40,7 @@ export class FormUpdateComponent {
   title = 'Update';
 
   form = this.fb.group({
+    id: ['', Validators.required],
     firstName: ['', Validators.required],
     lastName: ['', Validators.required],
     birthDate: ['', Validators.required],

@@ -39,3 +39,12 @@ button {
 input:focus {
   outline: 1px solid rgb(181, 181, 202);
 }
+
+.invalidField {
+  outline: 1px solid red;
+}
+
+.invalidMessage {
+  color: red;
+  font-size: 12px;
+}

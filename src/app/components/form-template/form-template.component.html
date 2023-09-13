@@ -1,7 +1,19 @@
-<form class="form-container" [formGroup]="form">
+<form
+  class="form-container"
+  [formGroup]="form"
+  (ngSubmit)="onSubmit()"
+  #formDir="ngForm"
+>
   <div *ngFor="let obj of formItems" class="form-block">
     <label for="">{{ obj.label }}: </label>
     <input type="{{ obj.type }}" formControlName="{{ obj.varName }}" />
+    <span
+      ngClass="invalidMessage"
+      *ngIf="
+        isSubmitted === true && this.form.get(obj.varName)?.status === 'INVALID'
+      "
+      >Field required</span
+    >
   </div>
 
   <button>{{ title }}</button>
