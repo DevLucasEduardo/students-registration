@@ -12,14 +12,15 @@ export class FormTemplateComponent {
   @Input() title!: string;
   @Input() form!: FormGroup;
 
-  isSubmitted: boolean = false;
+  isSubmitted: boolean = true;
 
   constructor(private fb: FormBuilder) {}
 
   onSubmit(): void {
-    this.isSubmitted = true;
     if (this.form.status === 'VALID') {
-      console.log('Enviado!');
-    }
+      console.log(this.form.get('firstName')?.value);
+      this.isSubmitted = true;
+      this.form.reset();
+    } else this.isSubmitted = false;
   }
 }

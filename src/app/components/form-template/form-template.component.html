@@ -10,7 +10,8 @@
     <span
       ngClass="invalidMessage"
       *ngIf="
-        isSubmitted === true && this.form.get(obj.varName)?.status === 'INVALID'
+        isSubmitted === false &&
+        this.form.get(obj.varName)?.status === 'INVALID'
       "
       >Field required</span
     >
