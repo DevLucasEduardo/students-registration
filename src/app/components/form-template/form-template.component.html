@@ -1,15 +1,8 @@
-<form class="form-container">
-  <div *ngFor="let key of formItems.keys()" class="form-block">
-    <label for="">{{ key }}: </label>
-    <input
-      *ngIf="title === 'Create' || key === 'ID'; else readOnlyBlock"
-      type="{{ formItems.get(key) }}"
-    />
-
-    <ng-template #readOnlyBlock>
-      <input type="{{ formItems.get(key) }}" readonly class="readonly-input" />
-    </ng-template>
+<form class="form-container" [formGroup]="form">
+  <div *ngFor="let obj of formItems" class="form-block">
+    <label for="">{{ obj.label }}: </label>
+    <input type="{{ obj.type }}" formControlName="{{ obj.varName }}" />
   </div>
 
-  <button (click)="sendFormsInfo()">{{ title }}</button>
+  <button>{{ title }}</button>
 </form>

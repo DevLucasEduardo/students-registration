@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormInputFormat } from '../form-template/IForm';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form-delete',
@@ -6,6 +8,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./form-delete.component.css'],
 })
 export class FormDeleteComponent {
-  formItems: Map<string, string> = new Map([['ID', 'text']]);
+  constructor(private fb: FormBuilder) {}
+
+  formItems: FormInputFormat[] = [
+    {
+      label: 'ID',
+      type: 'text',
+      varName: 'id',
+    },
+  ];
   title = 'Delete';
+
+  form = this.fb.group({
+    firstName: ['', Validators.required],
+    lastName: ['', Validators.required],
+    birthDate: ['', Validators.required],
+    course: ['', Validators.required],
+  });
 }

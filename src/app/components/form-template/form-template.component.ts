@@ -1,10 +1,6 @@
 import { Component, Input } from '@angular/core';
-import {
-  FormCreateFormat,
-  FormReadFormat,
-  FormUpdateFormat,
-  FormDeleteFormat,
-} from './IForm';
+import { FormInputFormat } from './IForm';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-form-template',
@@ -12,18 +8,9 @@ import {
   styleUrls: ['./form-template.component.css'],
 })
 export class FormTemplateComponent {
-  @Input() formItems!: Map<string, string>;
+  @Input() formItems!: FormInputFormat[];
   @Input() title!: string;
+  @Input() form!: any;
 
-  sendFormsInfo() {
-    if (this.title === 'Create') {
-      const formsInfo: FormCreateFormat = {
-        firstName: 'Lucas',
-        lastName: 'Eduardo',
-        birthDate: new Date('1998-01-17'),
-        course: 'Ads',
-      };
-      console.log(formsInfo);
-    }
-  }
+  constructor(private fb: FormBuilder) {}
 }

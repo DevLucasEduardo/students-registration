@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormInputFormat } from '../form-template/IForm';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form-create',
@@ -6,11 +8,37 @@ import { Component } from '@angular/core';
   styleUrls: ['./form-create.component.css'],
 })
 export class FormCreateComponent {
-  formItems: Map<string, string> = new Map([
-    ['First Name', 'text'],
-    ['Last Name', 'text'],
-    ['Birth Date', 'date'],
-    ['Course', 'text'],
-  ]);
+  constructor(private fb: FormBuilder) {}
+
+  formItems: FormInputFormat[] = [
+    {
+      label: 'First Name',
+      type: 'text',
+      varName: 'firstName',
+    },
+    {
+      label: 'Last Name',
+      type: 'text',
+      varName: 'lastName',
+    },
+    {
+      label: 'Birth Date',
+      type: 'date',
+      varName: 'birthDate',
+    },
+    {
+      label: 'Course',
+      type: 'text',
+      varName: 'course',
+    },
+  ];
+
   title = 'Create';
+
+  form = this.fb.group({
+    firstName: ['', Validators.required],
+    lastName: ['', Validators.required],
+    birthDate: ['', Validators.required],
+    course: ['', Validators.required],
+  });
 }
