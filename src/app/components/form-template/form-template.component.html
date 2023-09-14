@@ -9,10 +9,7 @@
     <input type="{{ obj.type }}" formControlName="{{ obj.varName }}" />
     <span
       ngClass="invalidMessage"
-      *ngIf="
-        isSubmitted === false &&
-        this.form.get(obj.varName)?.status === 'INVALID'
-      "
+      *ngIf="isSubmitted === false && !this.form.get(obj.varName)?.valid"
       >Field required</span
     >
   </div>

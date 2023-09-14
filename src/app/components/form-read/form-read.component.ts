@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormFormat, FormInputFormat } from '../form-template/IForm';
+import { FormInputFormat } from '../form-template/IForm';
 import { FormBuilder, Validators } from '@angular/forms';
 @Component({
   selector: 'app-form-read',

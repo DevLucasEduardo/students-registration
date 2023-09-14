@@ -1,6 +1,7 @@
-import { Component, Input, afterRender } from '@angular/core';
-import { FormInputFormat } from './IForm';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { Component, Input } from '@angular/core';
+import { FormFormat, FormInputFormat } from './IForm';
+
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-form-template',
@@ -13,12 +14,22 @@ export class FormTemplateComponent {
   @Input() form!: FormGroup;
 
   isSubmitted: boolean = true;
-
-  constructor(private fb: FormBuilder) {}
-
+  formData: FormFormat = {};
   onSubmit(): void {
-    if (this.form.status === 'VALID') {
-      console.log(this.form.get('firstName')?.value);
+    if (this.form.valid) {
+      if (
+        this.title === 'Read' ||
+        this.title === 'Delete' ||
+        this.title === 'Update'
+      ) {
+        this.formData.id = this.form.get('id')?.value;
+      }
+      if (this.title === 'Create' || this.title === 'Update') {
+        this.formData.firstName = this.form.get('firstName')?.value;
+        this.formData.lastName = this.form.get('lastName')?.value;
+        this.formData.birthDate = this.form.get('birthDate')?.value;
+        this.formData.course = this.form.get('course')?.value;
+      }
       this.isSubmitted = true;
       this.form.reset();
     } else this.isSubmitted = false;
